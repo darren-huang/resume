@@ -1,0 +1,1 @@
+./cpdf -squeeze 2023_Darren_Huang_Resume_c.pdf -o 2023_Darren_Huang_Resume_c_squeezed.pdf
