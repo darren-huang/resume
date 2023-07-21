@@ -1,1 +1,9 @@
-./cpdf -squeeze 2023_Darren_Huang_Resume_c.pdf -o 2023_Darren_Huang_Resume_c_squeezed.pdf
+if [[ 0 -le $# && $# -le 2 ]]; then
+    INFILE="${1:-2023_Darren_Huang_Resume.pdf}"
+    OUTFILE="${2:-2023_Darren_Huang_Resume_c.pdf}"
+    echo "compressing $INFILE into $OUTFILE"
+    ./cpdf -squeeze "$INFILE" -o "$OUTFILE"
+    mv "$INFILE" uncompressed
+else
+    echo "squeeze_cmd [INFILE] [OUTFILE]"
+fi
